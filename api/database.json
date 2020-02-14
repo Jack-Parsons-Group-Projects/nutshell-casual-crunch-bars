@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "roxanne@roxanne.com",
+      "userName": "Roxanne",
+      "password": "Roxanne"
+    },
+    {
+      "id": 2,
+      "email": "cody@cody.com",
+      "userName": "Cody",
+      "password": "Cody"
+    },
+    {
+      "id": 3,
+      "email": "mollie@mollie.com",
+      "userName": "Mollie",
+      "password": "Mollie"
+    },
+    {
+      "id": 4,
+      "email": "jack@jack.com",
+      "userName": "Jack",
+      "password": "Jack"
+    }
+  ],
+  "newsArticles": [
+    {
+      "id": 1,
+      "userId": 2,
+      "url": "https://www.limerickleader.ie/news/sport/517445/two-newcomers-among-six-changes-to-limerick-hurling-team-to-play-waterford.html",
+      "title": "Two newcomers among six changes to Limerick hurling team to play Waterford",
+      "synopsis": "Some great news for the Limerick team!",
+      "timestamp": "Thu, 13 February 2020 00:00:00"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "url": "https://www.premierguitar.com/articles/29848-How-to-Stay-Happy-and-Healthy-on-the-Road-Pete-Thorn-Touring-Tips",
+      "title": "How to Stay Happy and Healthy on the Road",
+      "synopsis": "Some great advice for my road warrior buddies",
+      "timestamp": "Thu, 13 February 2020 00:00:00"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 3,
+      "task": "Eyebrow Wax",
+      "expectedComplete": "Fri, 21 February 2020 15:00:00",
+      "isComplete": false
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "task": "Get a haircut",
+      "expectedComplete": "Fri, 21 February 2020 14:00:00",
+      "isComplete": true
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "Rage Against The Machine Concert!",
+      "date": "Sat, 16 May 2020 20:30:00",
+      "location": "St. Louis"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Taylor Swift Concert",
+      "date": "Sat, 1 August 2020 19:00:00",
+      "location": "Boston"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 4,
+      "message": "Going to be a little late today!"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "message": "Happy Caturday!"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "message": "Hello World!"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "message": "Sup skanks?"
+    },
+    {
+      "id": 5,
+      "userId": 4,
+      "message": "My band is playing on Sunday, come check us out!"
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 3,
+      "loggedInUserId": 1
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "loggedInUserId": 2
+    }
+  ]
+}
