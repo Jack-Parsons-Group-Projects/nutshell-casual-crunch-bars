@@ -7,3 +7,4 @@ events.renderNewTaskForm();
 events.saveNewTask();
 events.deleteTask();
 events.editTask();
+events.editComplete();

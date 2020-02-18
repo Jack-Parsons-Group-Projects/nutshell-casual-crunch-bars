@@ -68,6 +68,25 @@ const events = {
       }
     });
   },
+  editComplete() {
+    const tasks = document.querySelector("#tasks");
+    tasks.addEventListener("click", event => {
+      if (event.target.id.startsWith("completeTask--")) {
+        const taskToEdit = event.target.id.split("--")[1];
+
+        return fetch(`http://localhost:3000/tasks/${taskToEdit}`)
+          .then(resp => resp.json())
+          .then(task => {
+            if (task.isComplete === false) {
+              task.isComplete = true;
+              API.updateTask(task)
+              .then(API.getTasks)
+              .then(DOMrender.putTasksOnDom)
+            }
+          });
+      }
+    });
+  },
   deleteTask() {
     const tasks = document.querySelector("#tasks");
     tasks.addEventListener("click", event => {

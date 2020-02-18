@@ -6,7 +6,9 @@ const DOMrender = {
     container.innerHTML = "";
 
     tasks.forEach(task => {
-      container.innerHTML += HTMLFactories.makeTaskEntry(task);
+      if (task.isComplete === false) {
+        container.innerHTML += HTMLFactories.makeTaskEntry(task);
+      }
     });
   }
 };

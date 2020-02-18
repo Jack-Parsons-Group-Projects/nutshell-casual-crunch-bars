@@ -1,7 +1,10 @@
 const HTMLFactories = {
   makeTaskEntry(task) {
     return `<div class="task" id="task--${task.id}">
+    <div id="taskNameDiv">
     <h2 id="task--Name">${task.task}</h2>
+    <input id="completeTask--${task.id}" type="checkbox">
+    </div>
     <h5 id="task--expectedComplete">${task.expectedComplete}</h5>
     <div class="buttonDiv">
     <button class="taskButton" id="taskEdit--${task.id}">Edit</button>
