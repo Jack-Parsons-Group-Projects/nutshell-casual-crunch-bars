@@ -9,6 +9,77 @@
   </head>
 
   <body>
+    <article id="container"></article>
+    <article id="events">
+      <h1 id="eventsHeader">
+        Events <button class="addEventsBtn" type="submit">
+          +New Event
+        </button>
+      </h1>
+
+      <form action="">
+        <input type="hidden" id="eventsId" value="" />
+      </form>
+      <form action="" id="nameForm">
+        <fieldset>
+          <label for="name">Name of Event</label>
+          <input type="text" name="name" id="name" />
+        </fieldset>
+      </form>
+      <form action="" id="dateForm">
+        <fieldset>
+          <label for="date">Date of Event</label>
+          <input type="date" name="date" id="date">
+        </fieldset>
+      </form>
+      <form action="" id="locationForm">
+        <fieldset>
+          <label for="location">Location of Event</label>
+          <input type="text" name="location" id="location" />
+        </fieldset>
+      </form>
+      <button class="saveEventsBtn" id="saveEventsBtn" type="submit">
+        Save Event
+      </button>
+      <section id="eventsContainer"></section>
+    </article>
+
+
+    <article id="article">
+      <h1 id="articleHeader">
+        News <button class="addBtn" type="submit">
+          +New Article
+        </button>
+      </h1>
+
+      <form action="">
+        <input type="hidden" id="articleId" value="" />
+      </form>
+      <form action="" id="titleForm">
+        <fieldset>
+          <label for="title">News Title</label>
+          <input type="text" name="title" id="title" />
+        </fieldset>
+      </form>
+      <form action="" id="synopsisForm">
+        <fieldset>
+          <label for="synopsis">Synopsis</label>
+          <textarea cols="30" rows="3" name="synopsis" id="synopsis"></textarea>
+        </fieldset>
+      </form>
+      <form action="" id="urlForm">
+        <fieldset>
+          <label for="url">URL</label>
+          <input type="text" name="url" id="url" />
+        </fieldset>
+      </form>
+      <button class="saveBtn" id="saveBtn" type="submit">
+        Save Article
+      </button>
+      <section id="articleContainer"></section>
+    </article>
+    <script type="module" src="scripts/articles/mainArticle.js"></script>
+    <script type="module" src="scripts/events/mainEvents.js"></script>
     <div id="taskContainer">
       <legend><h1>Your tasks</h1></legend>
       <button type="button" id="formButton">Add Task</button>
