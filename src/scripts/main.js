@@ -8,4 +8,7 @@ import apiActions from "./messages/messageAPI.js"
 import renderMessages from "./messages/messagesDom.js"
 import createMessages from "./messages/createMessages.js"
 
-apiActions.getAllMessages().then(renderMessages).then(createMessages)
+
+apiActions.getAllMessages().then(renderMessages)
+.then(createMessages)
+

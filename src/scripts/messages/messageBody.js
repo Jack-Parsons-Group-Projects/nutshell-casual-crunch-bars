@@ -1,5 +1,7 @@
 export const messageBody = (message)=> {
 return `
-<div> ${message.user.userName}: ${message.message}</div>
+<container>
+<div> ${message.user.userName}: ${message.message}<button id=editMessage>Edit</button> <button id= deleteMessage>Delete</button></div> 
+</container>
 `
 }
