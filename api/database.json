@@ -32,7 +32,7 @@
       "url": "https://www.limerickleader.ie/news/sport/517445/two-newcomers-among-six-changes-to-limerick-hurling-team-to-play-waterford.html",
       "title": "Two newcomers among six changes to Limerick hurling team to play Waterford",
       "synopsis": "Some great news for the Limerick team!",
-      "timestamp": "Thu, 13 February 2020 00:00:00"
+      "timestamp": 1582040725331
     },
     {
       "id": 2,
@@ -40,7 +40,7 @@
       "url": "https://www.premierguitar.com/articles/29848-How-to-Stay-Happy-and-Healthy-on-the-Road-Pete-Thorn-Touring-Tips",
       "title": "How to Stay Happy and Healthy on the Road",
       "synopsis": "Some great advice for my road warrior buddies",
-      "timestamp": "Thu, 13 February 2020 00:00:00"
+      "timestamp": 1582040725332
     }
   ],
   "tasks": [
@@ -64,15 +64,22 @@
       "id": 1,
       "userId": 2,
       "name": "Rage Against The Machine Concert!",
-      "date": "Sat, 16 May 2020 20:30:00",
+      "date": "2020-02-19",
       "location": "St. Louis"
     },
     {
       "id": 2,
       "userId": 1,
       "name": "Taylor Swift Concert",
-      "date": "Sat, 1 August 2020 19:00:00",
+      "date": "2020-03-18",
       "location": "Boston"
+    },
+    {
+      "userId": 1,
+      "location": "hackery",
+      "name": "merge party",
+      "date": "2020-02-18",
+      "id": 3
     }
   ],
   "messages": [
