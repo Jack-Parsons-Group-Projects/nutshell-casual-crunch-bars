@@ -1,7 +1,7 @@
 const baseUrl = "http://localhost:3000"
 export default {
     getAllMessages() {
-        return fetch(`${baseUrl}/messages`)
+        return fetch(`${baseUrl}/messages?_expand=user`)
             .then(response => response.json());
     },
     editMessages(message) {
