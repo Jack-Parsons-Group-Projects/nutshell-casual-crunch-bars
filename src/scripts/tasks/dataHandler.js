@@ -14,13 +14,13 @@ const API = {
     });
   },
   updateTask(task) {
-      return fetch(`http://localhost:3000/tasks/${task.id}`, {
-          method: "PUT",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify(task)
-      })
+    return fetch(`http://localhost:3000/tasks/${task.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(task)
+    });
   },
   deleteTask(entryId) {
     return fetch(`http://localhost:3000/tasks/${entryId}`, {

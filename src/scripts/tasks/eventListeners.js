@@ -11,10 +11,9 @@ const events = {
     });
   },
   saveNewTask() {
-    const div = document.querySelector("#taskAddForm");
     const taskAddForm = document.getElementById("taskAddForm");
 
-    div.addEventListener("click", event => {
+    taskAddForm.addEventListener("click", event => {
       if (event.target.id === "saveTask") {
         const taskName = document.querySelector("#taskName");
         const taskExpectedComplete = document.querySelector(
@@ -49,22 +48,49 @@ const events = {
   editTask() {
     const tasks = document.querySelector("#tasks");
     tasks.addEventListener("click", event => {
-      if (event.target.id.startsWith("taskEdit--")) {
-        HTMLFactories.makeTaskEntryAddForm();
+      if (event.target.id.startsWith("taskName--")) {
+        HTMLFactories.makeEditTaskNameForm();
         const taskToEdit = event.target.id.split("--")[1];
-        const hiddenId = document.querySelector("#taskId");
-        const taskName = document.querySelector("#taskName");
+        const hiddenId = document.querySelector("#editTaskId");
+        const userId = document.querySelector("#editTaskUserId");
+        const taskName = document.querySelector("#editTaskName");
         const taskExpectedComplete = document.querySelector(
-          "#taskExpectedComplete"
+          "#editTaskExpectedComplete"
         );
 
         fetch(`http://localhost:3000/tasks/${taskToEdit}`)
           .then(resp => resp.json())
           .then(task => {
             hiddenId.value = task.id;
+            userId.value = task.userId;
             taskName.value = task.task;
             taskExpectedComplete.value = task.expectedComplete;
           });
+      }
+    });
+  },
+  saveEditedTask() {
+    const tasks = document.querySelector("#tasks");
+
+    tasks.addEventListener("keyup", event => {
+      if (event.keyCode === 13) {
+        const editedTaskId = document.querySelector("#editTaskId");
+        const editedTaskUserId = document.querySelector("#editTaskUserId");
+        const editTaskName = document.querySelector("#editTaskName");
+        const editTaskExpectedComplete = document.querySelector(
+          "#editTaskExpectedComplete"
+        );
+
+        const editedTask = HTMLFactories.editedTaskMaker(
+          editedTaskId.value,
+          editedTaskUserId.value,
+          editTaskName.value,
+          editTaskExpectedComplete.value
+        );
+
+        API.updateTask(editedTask)
+          .then(API.getTasks)
+          .then(DOMrender.putTasksOnDom);
       }
     });
   },
@@ -80,8 +106,8 @@ const events = {
             if (task.isComplete === false) {
               task.isComplete = true;
               API.updateTask(task)
-              .then(API.getTasks)
-              .then(DOMrender.putTasksOnDom)
+                .then(API.getTasks)
+                .then(DOMrender.putTasksOnDom);
             }
           });
       }
