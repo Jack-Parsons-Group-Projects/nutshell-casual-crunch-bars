@@ -45,18 +45,25 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 3,
-      "task": "Eyebrow Wax",
-      "expectedComplete": "Fri, 21 February 2020 15:00:00",
+      "task": "Get a haircut",
+      "expectedComplete": "2020-02-21T17:00",
+      "isComplete": true,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "userId": "4",
+      "task": "Bring Melba and Cormac to Vet",
+      "expectedComplete": "2020-02-19T09:30",
       "isComplete": false
     },
     {
-      "id": 2,
-      "userId": 2,
-      "task": "Get a haircut",
-      "expectedComplete": "Fri, 21 February 2020 14:00:00",
-      "isComplete": true
+      "task": "Oil Change",
+      "expectedComplete": "2020-02-21T14:00",
+      "isComplete": false,
+      "userId": 4,
+      "id": 4
     }
   ],
   "events": [
