@@ -1,12 +1,20 @@
 import createEventsEntry from "./eventsComponent.js"
 const eventsContainer = document.querySelector("#eventsContainer")
 
-// const removeUpcomingClass = () =>{
-//     const remove = document.querySelectorAll("#eventCard")
+const removeUpcomingClass = () =>{
+    const removes = document.querySelectorAll(".upcoming")
     
-//     remove.classList.remove("upcoming")
-// }
+    for (const remove of removes){
+        remove.classList.remove("upcoming")
+        
+    }
+}
 
+const addUpcomingClass = () =>{
+    const adds = document.querySelector("#eventCard")
+    adds.classList.add("upcoming")
+    
+}
 const renderEvents = events => {
     eventsContainer.innerHTML = ""
     
@@ -20,8 +28,9 @@ const renderEvents = events => {
         const eventsCard = createEventsEntry(event)
         eventsContainer.innerHTML += eventsCard
     }
-    // removeUpcomingClass()
-    // events[0].classList.add("upcoming")
+    removeUpcomingClass()
+    addUpcomingClass()
+    
 }
 
 export default renderEvents
