@@ -1,6 +1,10 @@
 import logInForm from "./logInForm.js";
 import tasksAPI from "../tasks/dataHandler.js";
 import DOMrender from "../tasks/DOMrender.js";
+import articleAPI from "../articles/articleData.js"
+import eventAPI from "../events/eventsData.js"
+import renderNewsArticle from "../articles/articleDom.js"
+import renderEvents from "../events/eventsDom.js"
 
 const authEvents = {
   logIn() {
@@ -22,6 +26,8 @@ const authEvents = {
 
           if (user !== undefined) {
             sessionStorage.setItem("userId", user.id);
+            articleAPI.getNewsArticles().then(renderNewsArticle)
+            eventAPI.getEvents().then(renderEvents)
             tasksAPI.getTasks().then(DOMrender.putTasksOnDom)
             logInForm.clearLogInForm();
           } else {
