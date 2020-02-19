@@ -3,7 +3,7 @@ const HTMLFactories = {
     return `<div class="task" id="task--${task.id}">
     <div id="taskNameDiv">
     <h4 id="taskName--${task.id}">${task.task}</h2>
-    <div id="taskEditBar"></div>
+    <div id="taskEditBar--${task.id}"></div>
     <input id="completeTask--${task.id}" type="checkbox">
     </div>
     <h6 id="expectedComplete--${task.id}">${task.expectedComplete}</h5>
@@ -43,8 +43,8 @@ const HTMLFactories = {
     </div>
     </div>`;
   },
-  makeEditTaskNameForm() {
-    const taskEditBar = document.getElementById("taskEditBar");
+  makeEditTaskNameForm(taskId) {
+    const taskEditBar = document.getElementById(`taskEditBar--${taskId}`);
     taskEditBar.innerHTML = `
       <div>
       <input type="hidden" id="editTaskId" value="">

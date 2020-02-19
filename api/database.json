@@ -54,16 +54,16 @@
     {
       "id": 3,
       "userId": "4",
-      "task": "Bring Melba and Cormac to Vet",
+      "task": "Bring Cormac to Vet",
       "expectedComplete": "2020-02-19T09:30",
       "isComplete": false
     },
     {
-      "task": "Oil Change",
+      "id": 4,
+      "userId": "4",
+      "task": "Oil Change and tire alignment",
       "expectedComplete": "2020-02-21T14:00",
-      "isComplete": false,
-      "userId": 4,
-      "id": 4
+      "isComplete": false
     }
   ],
   "events": [
