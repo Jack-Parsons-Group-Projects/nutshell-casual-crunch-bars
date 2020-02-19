@@ -2,7 +2,7 @@ import HTMLFactories from "./HTMLfactory.js";
 import API from "./dataHandler.js";
 import DOMrender from "./DOMrender.js";
 
-const events = {
+const taskEvents = {
   renderNewTaskForm() {
     const formButton = document.getElementById("formButton");
 
@@ -20,7 +20,6 @@ const events = {
           "#taskExpectedComplete"
         );
         const hiddenId = document.querySelector("#taskId");
-        sessionStorage.setItem("userId", 4);
 
         const newTask = HTMLFactories.taskMaker(
           taskName.value,
@@ -62,7 +61,7 @@ const events = {
           .then(resp => resp.json())
           .then(task => {
             hiddenId.value = task.id;
-            userId.value = task.userId;
+            userId.value = parseInt(task.userId);
             taskName.value = task.task;
             taskExpectedComplete.value = task.expectedComplete;
           });
@@ -83,7 +82,7 @@ const events = {
 
         const editedTask = HTMLFactories.editedTaskMaker(
           editedTaskId.value,
-          editedTaskUserId.value,
+          parseInt(editedTaskUserId.value),
           editTaskName.value,
           editTaskExpectedComplete.value
         );
@@ -129,4 +128,4 @@ const events = {
   }
 };
 
-export default events;
+export default taskEvents;
