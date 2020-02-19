@@ -6,15 +6,17 @@
 // console.log(message)
 import apiActions from "./messages/messageAPI.js"
 import renderMessages from "./messages/messagesDom.js"
-import createMessages from "./messages/messageHTML.js/index.js.js"
-
-
-apiActions.getAllMessages().then(renderMessages)
-.then(createMessages)
-
 import API from "./tasks/dataHandler.js";
 import DOMrender from "./tasks/DOMrender.js";
 import events from "./tasks/eventListeners.js";
+import addDeleteListener from "./messages/eventListeners.js"
+
+sessionStorage.setItem("userId", 3)
+
+apiActions.getAllMessages().then(renderMessages)
+addDeleteListener()
+
+
 
 API.getTasks().then(DOMrender.putTasksOnDom);
 events.renderNewTaskForm();

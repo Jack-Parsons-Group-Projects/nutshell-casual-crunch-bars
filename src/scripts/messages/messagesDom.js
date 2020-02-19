@@ -1,18 +1,19 @@
-import createMessages from "./messageHTML.js/index.js.js"
-import {messageBody} from "./messageBody.js"
+import messageHTML from "./messageHTML.js"
+
 
 const messagesList = document.querySelector("#messagesList");
 
 const renderMessages = messages => {
+    messagesList.innerHTML = ""
 
-    const createMessage = createMessages()
-       messagesList.innerHTML += createMessage
-   
-       messages.forEach(message=> {
-       const oneMessage = messageBody(message) 
-       document.querySelector(".messagesContainer").innerHTML += oneMessage
-       
-   });
+    const createMessage = messageHTML.createMessages()
+    messagesList.innerHTML += createMessage
+
+    messages.forEach(message => {
+        const oneMessage = messageHTML.messageBody(message)
+        document.querySelector(".messagesContainer").innerHTML += oneMessage
+
+    });
 }
-export default renderMessages ;
+export default renderMessages;
 
