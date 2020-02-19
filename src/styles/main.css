@@ -7,3 +7,9 @@
     border: 1px solid black;
     text-align: center;
 }
+
+.upcoming{
+    background-color: lightblue;
+    font-size: larger;
+    font-weight: bolder;
+}
