@@ -3,6 +3,4 @@
 // console.log(event)
 // export default sendMessagebtn
 
-const editMessageBtn = (event) => {
-    
-}
+document.querySelector("#edit--").addEventListener("click")
