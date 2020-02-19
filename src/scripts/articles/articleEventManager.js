@@ -60,7 +60,7 @@ const articleEventManager = {
       const title = document.getElementById("title").value;
       const synopsis = document.getElementById("synopsis").value;
       const url = document.getElementById("url").value;
-      const userId = 1;
+      const userId = parseInt(sessionStorage.getItem("userId"));
       
 
       if (title == false || synopsis == false || url == false) {
