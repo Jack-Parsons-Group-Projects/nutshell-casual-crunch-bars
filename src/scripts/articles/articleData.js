@@ -1,6 +1,6 @@
 const newsUrl = "http://localhost:3000";
 
-const API = {
+const articleAPI = {
   getNewsArticles() {
     return fetch(`${newsUrl}/newsArticles`).then(response => response.json());
   },
@@ -29,4 +29,4 @@ const API = {
   }
 };
 
-export default API;
+export default articleAPI;

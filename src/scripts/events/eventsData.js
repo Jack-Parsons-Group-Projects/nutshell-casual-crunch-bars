@@ -1,6 +1,6 @@
 const eventsUrl = "http://localhost:3000";
 
-const API = {
+const evnetAPI = {
   getEvents() {
     return fetch(`${eventsUrl}/events`).then(response => response.json());
   },
@@ -29,4 +29,4 @@ const API = {
   }
 };
 
-export default API;
+export default evnetAPI;

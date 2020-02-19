@@ -1,4 +1,4 @@
-import API from "./eventsData.js";
+import evnetAPI from "./eventsData.js";
 import renderEvents from "./eventsDom.js";
 
 const eventsContainer = document.querySelector("#eventsContainer");
@@ -76,15 +76,15 @@ const eventsEventManager = {
         };
         if (hidden !== "") {
           eventsEntry.id = parseInt(hidden);
-          API.editEvents(eventsEntry).then(() => {
-            API.getEvents()
+          evnetAPI.editEvents(eventsEntry).then(() => {
+            evnetAPI.getEvents()
               .then(renderEvents)
               .then(clearForm)
               .then(eventsEventManager.hideEventsInput);
           });
         } else {
-          API.postEvents(eventsEntry).then(() => {
-            API.getEvents()
+          evnetAPI.postEvents(eventsEntry).then(() => {
+            evnetAPI.getEvents()
               .then(renderEvents)
               .then(clearForm)
               .then(eventsEventManager.hideEventsInput);
@@ -97,8 +97,8 @@ const eventsEventManager = {
     eventsContainer.addEventListener("click", event => {
       if (event.target.id.startsWith("deleteEventsBtn--")) {
         const eventsIdToDelete = event.target.id.split("--")[1];
-        API.deleteEvents(eventsIdToDelete).then(() => {
-          API.getEvents().then(renderEvents);
+        evnetAPI.deleteEvents(eventsIdToDelete).then(() => {
+          evnetAPI.getEvents().then(renderEvents);
         });
       } else if (event.target.id.startsWith("editEventsBtn--")) {
         const eventsToEdit = event.target.id.split("--")[1];
