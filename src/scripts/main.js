@@ -13,3 +13,5 @@ taskEvents.editTask();
 taskEvents.saveEditedTask();
 taskEvents.editComplete();
 authEvents.logIn()
+authEvents.newUserForm();
+authEvents.addNewUser();
