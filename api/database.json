@@ -23,6 +23,18 @@
       "email": "jack@jack.com",
       "userName": "Jack",
       "password": "Jack"
+    },
+    {
+      "email": "kurt@kurt.com",
+      "userName": "Kurt",
+      "password": "Kurt",
+      "id": 6
+    },
+    {
+      "email": "matt@matt.com",
+      "userName": "Matt",
+      "password": "Matt",
+      "id": 7
     }
   ],
   "newsArticles": [
