@@ -49,8 +49,8 @@ const events = {
     const tasks = document.querySelector("#tasks");
     tasks.addEventListener("click", event => {
       if (event.target.id.startsWith("taskName--")) {
-        HTMLFactories.makeEditTaskNameForm();
         const taskToEdit = event.target.id.split("--")[1];
+        HTMLFactories.makeEditTaskNameForm(taskToEdit);
         const hiddenId = document.querySelector("#editTaskId");
         const userId = document.querySelector("#editTaskUserId");
         const taskName = document.querySelector("#editTaskName");
