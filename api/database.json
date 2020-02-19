@@ -173,6 +173,13 @@
       "name": "asdfasdf",
       "date": "2020-02-12",
       "id": 9
+    },
+    {
+      "userId": 4,
+      "location": "asdfasdf",
+      "name": "asdfas",
+      "date": "2020-02-19",
+      "id": 10
     }
   ],
   "messages": [

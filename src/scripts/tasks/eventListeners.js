@@ -1,5 +1,5 @@
 import HTMLFactories from "./HTMLfactory.js";
-import API from "./dataHandler.js";
+import tasksAPI from "./dataHandler.js";
 import DOMrender from "./DOMrender.js";
 
 const taskEvents = {
@@ -29,14 +29,14 @@ const taskEvents = {
 
         if (hiddenId.value !== "") {
           newTask.id = parseInt(hiddenId.value);
-          API.updateTask(newTask).then(() => {
-            API.getTasks()
+          tasksAPI.updateTask(newTask).then(() => {
+            tasksAPI.getTasks()
               .then(DOMrender.putTasksOnDom)
               .then((taskAddForm.innerHTML = ""));
           });
         } else {
-          API.postNewTask(newTask).then(() => {
-            API.getTasks()
+          tasksAPI.postNewTask(newTask).then(() => {
+            tasksAPI.getTasks()
               .then(DOMrender.putTasksOnDom)
               .then((taskAddForm.innerHTML = ""));
           });
@@ -87,8 +87,8 @@ const taskEvents = {
           editTaskExpectedComplete.value
         );
 
-        API.updateTask(editedTask)
-          .then(API.getTasks)
+        tasksAPI.updateTask(editedTask)
+          .then(tasksAPI.getTasks)
           .then(DOMrender.putTasksOnDom);
       }
     });
@@ -104,8 +104,8 @@ const taskEvents = {
           .then(task => {
             if (task.isComplete === false) {
               task.isComplete = true;
-              API.updateTask(task)
-                .then(API.getTasks)
+              tasksAPI.updateTask(task)
+                .then(tasksAPI.getTasks)
                 .then(DOMrender.putTasksOnDom);
             }
           });
@@ -120,8 +120,8 @@ const taskEvents = {
         const deleteButtonArray = deleteButtonId.split("--");
         const taskToDelete = deleteButtonArray[1];
 
-        API.deleteTask(taskToDelete)
-          .then(API.getTasks)
+        tasksAPI.deleteTask(taskToDelete)
+          .then(tasksAPI.getTasks)
           .then(DOMrender.putTasksOnDom);
       }
     });
