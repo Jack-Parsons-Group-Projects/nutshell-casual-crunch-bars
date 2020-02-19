@@ -53,16 +53,37 @@
     },
     {
       "id": 3,
-      "userId": "4",
+      "userId": 4,
       "task": "Bring Cormac to Vet",
       "expectedComplete": "2020-02-19T09:30",
       "isComplete": false
     },
     {
       "id": 4,
-      "userId": "4",
+      "userId": 4,
       "task": "Oil Change and tire alignment",
       "expectedComplete": "2020-02-21T14:00",
+      "isComplete": false
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "task": "Go to pharmacy",
+      "expectedComplete": "2020-02-20T13:00",
+      "isComplete": false
+    },
+    {
+      "task": "Shopping",
+      "expectedComplete": "2020-02-21T17:00",
+      "isComplete": false,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "task": "Bring Cormac and Melba to Vet",
+      "expectedComplete": "2020-02-21T08:30",
       "isComplete": false
     }
   ],
