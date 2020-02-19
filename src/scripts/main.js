@@ -6,7 +6,7 @@
 // console.log(message)
 import apiActions from "./messages/messageAPI.js"
 import renderMessages from "./messages/messagesDom.js"
-import createMessages from "./messages/createMessages.js"
+import createMessages from "./messages/messageHTML.js/index.js.js"
 
 
 apiActions.getAllMessages().then(renderMessages)

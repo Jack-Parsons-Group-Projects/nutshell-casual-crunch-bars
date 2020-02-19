@@ -2,5 +2,10 @@
 // sendMessagebtn.addEventListener("click", event)
 // console.log(event)
 // export default sendMessagebtn
-
-document.querySelector("#edit--").addEventListener("click")
+editMessage ()
+const editButton = document.querySelector("#edit--")
+editButton.addEventListener("click", event =>{
+    if (event.target.id.startswith("edit--")){
+        
+    }
+})

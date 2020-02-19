@@ -1,4 +1,4 @@
-import createMessages from "./createMessages.js"
+import createMessages from "./messageHTML.js/index.js.js"
 import {messageBody} from "./messageBody.js"
 
 const messagesList = document.querySelector("#messagesList");
