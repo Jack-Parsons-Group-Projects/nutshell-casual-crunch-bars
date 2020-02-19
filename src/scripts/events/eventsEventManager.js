@@ -60,7 +60,7 @@ const eventsEventManager = {
       const name = document.getElementById("name").value;
       const date = document.getElementById("date").value;
       const location = document.getElementById("location").value;
-      const userId = 1;
+      const userId = parseInt(sessionStorage.getItem("userId"));
       
 
       if (name == false || date == false || location == false) {
