@@ -1,3 +1,13 @@
+
+import apiActions from "./messages/messageAPI.js"
+import renderMessages from "./messages/messagesDom.js"
+import messEventManager from "./messages/eventListeners.js"
+
+apiActions.getAllMessages().then(renderMessages)
+messEventManager.addDeleteListener()
+messEventManager.sendMessageListener()
+
+
 import tasksAPI from "./tasks/dataHandler.js";
 import DOMrender from "./tasks/DOMrender.js";
 import taskEvents from "./tasks/eventListeners.js";
