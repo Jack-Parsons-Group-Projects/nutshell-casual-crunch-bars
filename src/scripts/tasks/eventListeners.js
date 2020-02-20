@@ -1,8 +1,8 @@
 import HTMLFactories from "./HTMLfactory.js";
-import API from "./dataHandler.js";
+import tasksAPI from "./dataHandler.js";
 import DOMrender from "./DOMrender.js";
 
-const events = {
+const taskEvents = {
   renderNewTaskForm() {
     const formButton = document.getElementById("formButton");
 
@@ -20,7 +20,6 @@ const events = {
           "#taskExpectedComplete"
         );
         const hiddenId = document.querySelector("#taskId");
-        sessionStorage.setItem("userId", 4);
 
         const newTask = HTMLFactories.taskMaker(
           taskName.value,
@@ -30,14 +29,14 @@ const events = {
 
         if (hiddenId.value !== "") {
           newTask.id = parseInt(hiddenId.value);
-          API.updateTask(newTask).then(() => {
-            API.getTasks()
+          tasksAPI.updateTask(newTask).then(() => {
+            tasksAPI.getTasks()
               .then(DOMrender.putTasksOnDom)
               .then((taskAddForm.innerHTML = ""));
           });
         } else {
-          API.postNewTask(newTask).then(() => {
-            API.getTasks()
+          tasksAPI.postNewTask(newTask).then(() => {
+            tasksAPI.getTasks()
               .then(DOMrender.putTasksOnDom)
               .then((taskAddForm.innerHTML = ""));
           });
@@ -49,8 +48,8 @@ const events = {
     const tasks = document.querySelector("#tasks");
     tasks.addEventListener("click", event => {
       if (event.target.id.startsWith("taskName--")) {
-        HTMLFactories.makeEditTaskNameForm();
         const taskToEdit = event.target.id.split("--")[1];
+        HTMLFactories.makeEditTaskNameForm(taskToEdit);
         const hiddenId = document.querySelector("#editTaskId");
         const userId = document.querySelector("#editTaskUserId");
         const taskName = document.querySelector("#editTaskName");
@@ -62,7 +61,7 @@ const events = {
           .then(resp => resp.json())
           .then(task => {
             hiddenId.value = task.id;
-            userId.value = task.userId;
+            userId.value = parseInt(task.userId);
             taskName.value = task.task;
             taskExpectedComplete.value = task.expectedComplete;
           });
@@ -83,13 +82,13 @@ const events = {
 
         const editedTask = HTMLFactories.editedTaskMaker(
           editedTaskId.value,
-          editedTaskUserId.value,
+          parseInt(editedTaskUserId.value),
           editTaskName.value,
           editTaskExpectedComplete.value
         );
 
-        API.updateTask(editedTask)
-          .then(API.getTasks)
+        tasksAPI.updateTask(editedTask)
+          .then(tasksAPI.getTasks)
           .then(DOMrender.putTasksOnDom);
       }
     });
@@ -105,8 +104,8 @@ const events = {
           .then(task => {
             if (task.isComplete === false) {
               task.isComplete = true;
-              API.updateTask(task)
-                .then(API.getTasks)
+              tasksAPI.updateTask(task)
+                .then(tasksAPI.getTasks)
                 .then(DOMrender.putTasksOnDom);
             }
           });
@@ -121,12 +120,12 @@ const events = {
         const deleteButtonArray = deleteButtonId.split("--");
         const taskToDelete = deleteButtonArray[1];
 
-        API.deleteTask(taskToDelete)
-          .then(API.getTasks)
+        tasksAPI.deleteTask(taskToDelete)
+          .then(tasksAPI.getTasks)
           .then(DOMrender.putTasksOnDom);
       }
     });
   }
 };
 
-export default events;
+export default taskEvents;

@@ -1,4 +1,4 @@
-import API from "./articleData.js";
+import articleAPI from "./articleData.js";
 import renderNewsArticle from "./articleDom.js";
 
 const articleContainer = document.querySelector("#articleContainer");
@@ -60,7 +60,7 @@ const articleEventManager = {
       const title = document.getElementById("title").value;
       const synopsis = document.getElementById("synopsis").value;
       const url = document.getElementById("url").value;
-      const userId = 1;
+      const userId = parseInt(sessionStorage.getItem("userId"));
       
 
       if (title == false || synopsis == false || url == false) {
@@ -76,15 +76,15 @@ const articleEventManager = {
         };
         if (hidden !== "") {
           articleEntry.id = parseInt(hidden);
-          API.editNewsArticles(articleEntry).then(() => {
-            API.getNewsArticles()
+          articleAPI.editNewsArticles(articleEntry).then(() => {
+            articleAPI.getNewsArticles()
               .then(renderNewsArticle)
               .then(clearForm)
               .then(articleEventManager.hideArticleInput);
           });
         } else {
-          API.postNewsArticles(articleEntry).then(() => {
-            API.getNewsArticles()
+          articleAPI.postNewsArticles(articleEntry).then(() => {
+            articleAPI.getNewsArticles()
               .then(renderNewsArticle)
               .then(clearForm)
               .then(articleEventManager.hideArticleInput);
@@ -97,8 +97,8 @@ const articleEventManager = {
     articleContainer.addEventListener("click", event => {
       if (event.target.id.startsWith("deleteBtn--")) {
         const articleIdToDelete = event.target.id.split("--")[1];
-        API.deleteNewsArticles(articleIdToDelete).then(() => {
-          API.getNewsArticles().then(renderNewsArticle);
+        articleAPI.deleteNewsArticles(articleIdToDelete).then(() => {
+          articleAPI.getNewsArticles().then(renderNewsArticle);
         });
       } else if (event.target.id.startsWith("editBtn--")) {
         const articleToEdit = event.target.id.split("--")[1];

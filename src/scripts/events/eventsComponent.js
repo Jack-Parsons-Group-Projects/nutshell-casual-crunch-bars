@@ -1,5 +1,5 @@
 const createEventsEntry = event => `
-<div id="eventCard">
+<div id="eventCard" >
     <h3>${event.name}</h3>
     <span>${event.date}</span><br>
     <span>${event.location}</span>

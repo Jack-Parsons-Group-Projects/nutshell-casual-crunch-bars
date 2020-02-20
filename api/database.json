@@ -23,24 +23,78 @@
       "email": "jack@jack.com",
       "userName": "Jack",
       "password": "Jack"
+    },
+    {
+      "email": "keith@keith.com",
+      "userName": "Keith",
+      "password": "Keith",
+      "id": 5
     }
   ],
   "newsArticles": [
     {
-      "id": 1,
-      "userId": 2,
-      "url": "https://www.limerickleader.ie/news/sport/517445/two-newcomers-among-six-changes-to-limerick-hurling-team-to-play-waterford.html",
-      "title": "Two newcomers among six changes to Limerick hurling team to play Waterford",
-      "synopsis": "Some great news for the Limerick team!",
-      "timestamp": 1582040725331
+      "userId": 1,
+      "url": "https://www.fox10phoenix.com/news/prank-group-releases-pigeons-with-maga-hats-over-democratic-debate-in-las-vegas.amp",
+      "title": "Prank group releases pigeons with MAGA hats over Democratic debate in Las Vegas",
+      "synopsis": "A prank group is apparently looking to send an aerial message ahead of Wednesday’s Democratic debate in Las Vegas.",
+      "timestamp": 1582211614464,
+      "id": 3
     },
     {
-      "id": 2,
+      "userId": 1,
+      "url": "https://www.pbs.org/newshour/nation/u-s-judge-sides-with-migrants-in-case-against-border-patrol",
+      "title": "U.S. judge sides with migrants in case against Border Patrol",
+      "synopsis": "Conditions at most Border Patrol facilities in Arizona are punitive and unconstitutional, a U.S. judge in Arizona said Wednesday while ruling in favor of migrants who have long-complained about inhumane and unsanitary conditions in holding cells.",
+      "timestamp": 1582211678158,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "url": "https://taskandpurpose.com/syria-weapons-isis-pentagon-inspector-general-report",
+      "title": "The Pentagon lost track of $715 million in weapons and gear funneled to anti-ISIS allies in Syria",
+      "synopsis": "The U.S. government failed to effectively account for nearly $715.8 million in weapons and equipment allocated to Syrian partners as part of the multinational counter-ISIS fight, according to a new report from the Defense Department inspector general.",
+      "timestamp": 1582212056429,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "url": "https://www.cbsnews.com/news/kennedy-catholic-high-school-protests-washington-allegedly-firing-teachers-for-being-gay/",
+      "title": "Catholic school facing protests for allegedly forcing gay teachers out of their jobs",
+      "synopsis": "Students and parents were planning protests after a Catholic school outside of Seattle allegedly forced out two teachers for being gay. Kennedy Catholic High School in Burien, Washington, claims that both English teacher Paul Danforth and soccer coach Michelle Beattie \"voluntarily resigned\" shortly after they got engaged to same-sex partners.",
+      "timestamp": 1582212284004,
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "url": "https://www.cultofmac.com/685669/larry-tesler-the-apple-employee-who-invented-cut-copy-paste-dies-at-74/",
+      "title": "Larry Tesler, the Apple employee who invented cut, copy and paste, dies at 74",
+      "synopsis": "Larry Tesler, a pioneering computer scientist who worked at Apple from 1980 to 1997 and created computerized cut, copy and paste, died Monday at the age of 74.",
+      "timestamp": 1582212426496,
+      "id": 8
+    },
+    {
       "userId": 4,
-      "url": "https://www.premierguitar.com/articles/29848-How-to-Stay-Happy-and-Healthy-on-the-Road-Pete-Thorn-Touring-Tips",
-      "title": "How to Stay Happy and Healthy on the Road",
-      "synopsis": "Some great advice for my road warrior buddies",
-      "timestamp": 1582040725332
+      "url": "https://www.cnn.com/2020/02/19/us/school-bus-driver-casket-55-years-trnd/index.html",
+      "title": "A man who drove a school bus for 55 years will be laid to rest in a school bus casket",
+      "synopsis": "Glen Davis was arguably the best-known driver in all of Grand Meadow, Minnesota.\n\nFor 55 years, residents of his small town of 1,170 trusted him to bus their children to and from school. He was proud to say he'd never once gotten in an accident.",
+      "timestamp": 1582212670234,
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "url": "https://www.abc.net.au/news/2020-02-20/200-vehicles-pile-up-in-whiteout-conditions-in-canada/11986116",
+      "title": "Massive vehicle pileup in Canada involving 200 cars after whiteout conditions on Quebec highway",
+      "synopsis": "Canadian police say whiteout conditions that came about suddenly most likely triggered a massive, deadly pileup involving about 200 vehicles south of Montreal.",
+      "timestamp": 1582217043634,
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "url": "https://www.nytimes.com/2020/02/19/us/politics/trump-pardons.html",
+      "title": "The 11 Criminals Granted Clemency by Trump Had One Thing in Common: Connections",
+      "synopsis": "Excellent work draining the swamp, pal. Great job.",
+      "timestamp": 1582217146547,
+      "id": 11
     }
   ],
   "tasks": [
@@ -53,40 +107,152 @@
     },
     {
       "id": 3,
-      "userId": "4",
-      "task": "Bring Melba and Cormac to Vet",
+      "userId": 4,
+      "task": "Bring Cormac to Vet",
       "expectedComplete": "2020-02-19T09:30",
       "isComplete": false
     },
     {
-      "task": "Oil Change",
-      "expectedComplete": "2020-02-21T14:00",
-      "isComplete": false,
+      "id": 4,
       "userId": 4,
-      "id": 4
+      "task": "Oil Change and tire alignment",
+      "expectedComplete": "2020-02-21T14:00",
+      "isComplete": false
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "task": "Go to pharmacy",
+      "expectedComplete": "2020-02-20T13:00",
+      "isComplete": false
+    },
+    {
+      "task": "Shopping",
+      "expectedComplete": "2020-02-21T17:00",
+      "isComplete": false,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "task": "Bring Cormac and Melba to Vet",
+      "expectedComplete": "2020-02-21T08:30",
+      "isComplete": false
+    },
+    {
+      "task": "Clean Bedroom",
+      "expectedComplete": "2020-02-21T12:30",
+      "isComplete": false,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "task": "Take Dogs to Dog Park",
+      "expectedComplete": "2020-02-22T12:00",
+      "isComplete": false,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "task": "Do Laundry",
+      "expectedComplete": "2020-02-21T18:30",
+      "isComplete": false,
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "task": "Do Dishes",
+      "expectedComplete": "2020-02-22T12:00",
+      "isComplete": false,
+      "userId": 2,
+      "id": 11
+    },
+    {
+      "task": "Polish glasses",
+      "expectedComplete": "2020-02-20T12:00",
+      "isComplete": false,
+      "userId": 5,
+      "id": 12
     }
   ],
   "events": [
     {
       "id": 1,
-      "userId": 2,
+      "userId": 3,
       "name": "Rage Against The Machine Concert!",
       "date": "2020-02-19",
       "location": "St. Louis"
     },
     {
       "id": 2,
-      "userId": 1,
+      "userId": 3,
       "name": "Taylor Swift Concert",
       "date": "2020-03-18",
       "location": "Boston"
     },
     {
       "userId": 1,
-      "location": "hackery",
-      "name": "merge party",
-      "date": "2020-02-18",
+      "location": "Bridgestone Arena",
+      "name": "Taylor Swift Concert",
+      "date": "2020-02-28",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "location": "Grand Ole Opry",
+      "name": "Grand Ole Opry",
+      "date": "2020-02-22",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "location": "Nissan Stadium",
+      "name": "Nashville SC vs Atlanta United",
+      "date": "2020-02-29",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "location": "Enterprise Center",
+      "name": "Rage Against The Machine",
+      "date": "2020-05-16",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "location": "Enterprise Center",
+      "name": "Rage Against The Machine",
+      "date": "2020-05-16",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "location": "Woodland Presbyterian",
+      "name": "Getting hitched!",
+      "date": "2020-09-19",
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "location": "The Basement",
+      "name": "Smart Objects & Arts Fishing Club",
+      "date": "2020-02-23",
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "location": "<em>Bali<em>",
+      "name": "Honeymoon",
+      "date": "2020-09-20",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "location": "BlueBird Cafe",
+      "name": "BlueBirds Cafe Fat Tuesday Celebration",
+      "date": "2020-02-25",
+      "id": 8
     }
   ],
   "messages": [
