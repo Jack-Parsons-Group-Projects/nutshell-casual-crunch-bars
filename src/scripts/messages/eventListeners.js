@@ -3,12 +3,13 @@ import renderMessages from "./messagesDom.js"
 import messageHTML from "./messageHTML.js"
 const updateMessageField = messageId => {
     const messHidden = document.getElementById("hiddenMessid")
-    const message = document.getElementById("messageEdit")
-    fetch (`http://localhost:3000/messages/${messageId}`)
+    const messageEdited = document.getElementById("messageTextBox")
+    console.log(messageId)
+    fetch (`http://localhost:3000/messages?_expand=user/${messageId}`)
     .then(resp=>resp.json)
     .then(message => {
         messHidden.value = message.id 
-        message.value = message.message
+        messageEdited.value = message.message
     })
 }
 
@@ -47,6 +48,7 @@ const messEventManager = {
             const messField = document.querySelector("#messageTextBox").value
             const hidden = document.querySelector("#hiddenMessid").value
             const messageUserId = parseInt(sessionStorage.getItem("userId"))
+            console.log(hidden)
             const messageEntry = {
                 userId: messageUserId,
                 message: messField

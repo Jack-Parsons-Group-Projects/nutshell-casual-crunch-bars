@@ -275,6 +275,11 @@
       "id": 4,
       "userId": 4,
       "message": "Come checkout my band on Sunday"
+    },
+    {
+      "userId": 3,
+      "message": "yo",
+      "id": 5
     }
   ],
   "friends": [

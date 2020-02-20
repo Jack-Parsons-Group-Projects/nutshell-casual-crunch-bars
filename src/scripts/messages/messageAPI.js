@@ -5,7 +5,7 @@ export default {
             .then(response => response.json());
     },
     addNewMessage(newMessage) {
-        return fetch(`${baseUrl}/messages`, {
+        return fetch(`${baseUrl}/messages?_expand=user`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
