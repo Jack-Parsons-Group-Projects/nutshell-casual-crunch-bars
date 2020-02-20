@@ -50,7 +50,6 @@ const authEvents = {
 
     addNewUserForm.addEventListener("click", event => {
       if (event.target.id === "newUserButton") {
-        console.log("hooray!");
         const newEmail = document.querySelector("#newEmail");
         const newUserName = document.querySelector("#newUsername");
         const newPassword = document.querySelector("#newPassword");
@@ -70,10 +69,32 @@ const authEvents = {
               "Content-Type": "application/json"
             },
             body: JSON.stringify(newUserObject)
-          });
+          }).then(resp => resp.json()).then(user => {
+            sessionStorage.setItem("userId", user.id);
 
-          logInForm.clearRegistraionForm();
+            fetch(`http://localhost:3000/users`)
+              .then(resp => resp.json())
+              .then(arr => {
+                const email = newEmail.value;
+                const password = newPassword.value;
+                const user = arr.find(
+                  el => el.email === email && el.password === password
+                );
+
+                if (user !== undefined) {
+                  sessionStorage.setItem("userId", user.id);
+                  articleAPI.getNewsArticles().then(renderNewsArticle);
+                  eventAPI.getEvents().then(renderEvents);
+                  tasksAPI.getTasks().then(DOMrender.putTasksOnDom);
+                  logInForm.clearLogInForm();
+                } else {
+                  const logInField = document.querySelector("#logInField");
+                  logInField.innerHTML += `<h3>Login information not found</h3>`;
+                }
+              });
+          });
         }
+        logInForm.clearRegistraionForm();
       }
     });
   }

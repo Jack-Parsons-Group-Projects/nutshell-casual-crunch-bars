@@ -23,6 +23,12 @@
       "email": "jack@jack.com",
       "userName": "Jack",
       "password": "Jack"
+    },
+    {
+      "email": "keith@keith.com",
+      "userName": "Keith",
+      "password": "Keith",
+      "id": 5
     }
   ],
   "newsArticles": [
@@ -41,14 +47,6 @@
       "synopsis": "Conditions at most Border Patrol facilities in Arizona are punitive and unconstitutional, a U.S. judge in Arizona said Wednesday while ruling in favor of migrants who have long-complained about inhumane and unsanitary conditions in holding cells.",
       "timestamp": 1582211678158,
       "id": 4
-    },
-    {
-      "userId": 2,
-      "url": "https://www.wsoctv.com/news/local/fedex-worker-helping-stranded-driver-falls-75-feet-off-salisbury-bridge-survives/QSTGQ7THGZAEJC3XOAHSN6KEPE/",
-      "title": "'Thank God I’m alive’: FedEx driver survives 75-foot fall from Salisbury bridge",
-      "synopsis": "A FedEx worker who stopped to help a stranded driver fell off the Yadkin River Bridge in Rowan County early Wednesday morning.",
-      "timestamp": 1582211965150,
-      "id": 5
     },
     {
       "userId": 2,
@@ -84,19 +82,19 @@
     },
     {
       "userId": 4,
-      "url": "https://www.npr.org/2020/02/20/807639778/6-takeaways-from-the-nevada-democratic-debate",
-      "title": "6 Takeaways from the Nevada Democratic Debate",
-      "synopsis": "As predicted, Bloomberg is a complete gasbag.",
-      "timestamp": 1582211080089,
-      "id": 5
-    },
-    {
-      "userId": 4,
       "url": "https://www.abc.net.au/news/2020-02-20/200-vehicles-pile-up-in-whiteout-conditions-in-canada/11986116",
       "title": "Massive vehicle pileup in Canada involving 200 cars after whiteout conditions on Quebec highway",
       "synopsis": "Canadian police say whiteout conditions that came about suddenly most likely triggered a massive, deadly pileup involving about 200 vehicles south of Montreal.",
-      "timestamp": 1582212851703,
+      "timestamp": 1582217043634,
       "id": 10
+    },
+    {
+      "userId": 4,
+      "url": "https://www.nytimes.com/2020/02/19/us/politics/trump-pardons.html",
+      "title": "The 11 Criminals Granted Clemency by Trump Had One Thing in Common: Connections",
+      "synopsis": "Excellent work draining the swamp, pal. Great job.",
+      "timestamp": 1582217146547,
+      "id": 11
     }
   ],
   "tasks": [
@@ -169,6 +167,13 @@
       "isComplete": false,
       "userId": 2,
       "id": 11
+    },
+    {
+      "task": "Polish glasses",
+      "expectedComplete": "2020-02-20T12:00",
+      "isComplete": false,
+      "userId": 5,
+      "id": 12
     }
   ],
   "events": [
