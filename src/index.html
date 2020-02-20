@@ -9,42 +9,51 @@
   </head>
 
   <body>
+    <h1 id="logo">Nutshell</h1>
     <article id="logInFormArticle"></article>
     <article id="newUserFormArticle"></article>
-    <article id="events">
-      <h1 id="eventsHeader">
-        Events
-        <button class="addEventsBtn" type="submit">
-          +New Event
-        </button>
-      </h1>
+    <div id="tasksAndEventsBox">
+      <div class="card" id="taskContainer">
+        <legend><h2>Your tasks</h2></legend>
+        <button type="button" id="formButton">Add Task</button>
+        <div id="taskAddForm"></div>
+        <div id="tasks"></div>
+      </div>
+      <article class="card" id="events">
+        <h1 id="eventsHeader">
+          Events
+          <button class="addEventsBtn" type="submit">
+            +New Event
+          </button>
+        </h1>
 
-      <form action="">
-        <input type="hidden" id="eventsId" value="" />
-      </form>
-      <form action="" id="nameForm">
-        <fieldset>
-          <label for="name">Name of Event</label>
-          <input type="text" name="name" id="name" />
-        </fieldset>
-      </form>
-      <form action="" id="dateForm">
-        <fieldset>
-          <label for="date">Date of Event</label>
-          <input type="date" name="date" id="date" />
-        </fieldset>
-      </form>
-      <form action="" id="locationForm">
-        <fieldset>
-          <label for="location">Location of Event</label>
-          <input type="text" name="location" id="location" />
-        </fieldset>
-      </form>
-      <button class="saveEventsBtn" id="saveEventsBtn" type="submit">
-        Save Event
-      </button>
-      <section id="eventsContainer"></section>
-    </article>
+        <form action="">
+          <input type="hidden" id="eventsId" value="" />
+        </form>
+        <form action="" id="nameForm">
+          <fieldset>
+            <label for="name">Name of Event</label>
+            <input type="text" name="name" id="name" />
+          </fieldset>
+        </form>
+        <form action="" id="dateForm">
+          <fieldset>
+            <label for="date">Date of Event</label>
+            <input type="date" name="date" id="date" />
+          </fieldset>
+        </form>
+        <form action="" id="locationForm">
+          <fieldset>
+            <label for="location">Location of Event</label>
+            <input type="text" name="location" id="location" />
+          </fieldset>
+        </form>
+        <button class="saveEventsBtn" id="saveEventsBtn" type="submit">
+          Save Event
+        </button>
+        <section id="eventsContainer"></section>
+      </article>
+    </div>
 
     <article id="article">
       <h1 id="articleHeader">
@@ -80,14 +89,9 @@
       </button>
       <section id="articleContainer"></section>
     </article>
+
     <script type="module" src="scripts/articles/mainArticle.js"></script>
     <script type="module" src="scripts/events/mainEvents.js"></script>
-    <div id="taskContainer">
-      <legend><h1>Your tasks</h1></legend>
-      <button type="button" id="formButton">Add Task</button>
-      <div id="taskAddForm"></div>
-      <div id="tasks"></div>
-    </div>
     <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

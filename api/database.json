@@ -35,6 +35,12 @@
       "userName": "Matt",
       "password": "Matt",
       "id": 7
+    },
+    {
+      "email": "holly@holly.com",
+      "userName": "Holly",
+      "password": "Holly",
+      "id": 8
     }
   ],
   "newsArticles": [
@@ -69,6 +75,14 @@
       "synopsis": "asdfasdf",
       "timestamp": 1582144987160,
       "id": 4
+    },
+    {
+      "userId": 4,
+      "url": "https://www.npr.org/2020/02/20/807639778/6-takeaways-from-the-nevada-democratic-debate",
+      "title": "6 Takeaways from the Nevada Democratic Debate",
+      "synopsis": "As predicted, Bloomberg is a complete gasbag.",
+      "timestamp": 1582211080089,
+      "id": 5
     }
   ],
   "tasks": [
@@ -188,10 +202,24 @@
     },
     {
       "userId": 4,
-      "location": "asdfasdf",
-      "name": "asdfas",
-      "date": "2020-02-19",
+      "location": "Woodland Presbyterian",
+      "name": "Getting hitched!",
+      "date": "2020-09-19",
       "id": 10
+    },
+    {
+      "userId": 4,
+      "location": "The Basement",
+      "name": "Smart Objects & Arts Fishing Club",
+      "date": "2020-02-23",
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "location": "<em>Bali<em>",
+      "name": "Honeymoon",
+      "date": "2020-09-20",
+      "id": 12
     }
   ],
   "messages": [

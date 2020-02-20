@@ -1,6 +1,8 @@
 const logInForm = {
   makeLogInForm() {
     const inputForm = document.querySelector("#logInFormArticle");
+    const data = sessionStorage.getItem("userId")
+
     inputForm.innerHTML = `<div id="logInField">
                 <h4>Email</h4>
                 <input id="inputEmail">
