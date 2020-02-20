@@ -1,9 +1,10 @@
 const logInForm = {
   makeLogInForm() {
     const inputForm = document.querySelector("#logInFormArticle");
-    const data = sessionStorage.getItem("userId")
+    const data = sessionStorage.getItem("userId");
 
     inputForm.innerHTML = `<div id="logInField">
+                <h1>Welcome to Nutshell!</h1>
                 <h4>Email</h4>
                 <input id="inputEmail">
                 <h4>Password</h4>
@@ -14,12 +15,12 @@ const logInForm = {
                 </div>
                 </div>`;
   },
-  clearLogInForm() {
+  clearLogInForm(username) {
     const inputForm = document.querySelector("#logInFormArticle");
-    inputForm.innerHTML = "";
+    inputForm.innerHTML = `<h1>Welcome, ${username}!</h1>`;
   },
   makeRegistrationForm() {
-    const newUserInputForm = document.querySelector("#newUserFormArticle")
+    const newUserInputForm = document.querySelector("#newUserFormArticle");
     newUserInputForm.innerHTML = `<div id="newUserField">
     <h4>Username</h4>
     <input id="newUsername">
@@ -32,12 +33,12 @@ const logInForm = {
     <div>
     <button id="newUserButton">Register your account</button>
     </div>
-    </div>`
+    </div>`;
   },
   clearRegistraionForm() {
-    const newUserInputForm = document.querySelector("#newUserFormArticle")
+    const newUserInputForm = document.querySelector("#newUserFormArticle");
     newUserInputForm.innerHTML = "";
-    this.clearLogInForm()
+    this.clearLogInForm();
   }
 };
 
