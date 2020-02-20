@@ -23,52 +23,72 @@
       "email": "jack@jack.com",
       "userName": "Jack",
       "password": "Jack"
-    },
-    {
-      "email": "kurt@kurt.com",
-      "userName": "Kurt",
-      "password": "Kurt",
-      "id": 6
-    },
-    {
-      "email": "matt@matt.com",
-      "userName": "Matt",
-      "password": "Matt",
-      "id": 7
     }
   ],
   "newsArticles": [
     {
-      "id": 1,
-      "userId": 3,
-      "url": "https://www.limerickleader.ie/news/sport/517445/two-newcomers-among-six-changes-to-limerick-hurling-team-to-play-waterford.html",
-      "title": "Two newcomers among six changes to Limerick hurling team to play Waterford",
-      "synopsis": "Some great news for the Limerick team!",
-      "timestamp": 1582040725331
-    },
-    {
-      "id": 2,
-      "userId": 4,
-      "url": "https://www.premierguitar.com/articles/29848-How-to-Stay-Happy-and-Healthy-on-the-Road-Pete-Thorn-Touring-Tips",
-      "title": "How to Stay Happy and Healthy on the Road",
-      "synopsis": "Some great advice for my road warrior buddies",
-      "timestamp": 1582040725332
-    },
-    {
-      "userId": 3,
-      "url": "zxcvzx",
-      "title": "zxcvzxc",
-      "synopsis": "zxcvzxc",
-      "timestamp": 1582142205255,
+      "userId": 1,
+      "url": "https://www.fox10phoenix.com/news/prank-group-releases-pigeons-with-maga-hats-over-democratic-debate-in-las-vegas.amp",
+      "title": "Prank group releases pigeons with MAGA hats over Democratic debate in Las Vegas",
+      "synopsis": "A prank group is apparently looking to send an aerial message ahead of Wednesday’s Democratic debate in Las Vegas.",
+      "timestamp": 1582211614464,
       "id": 3
     },
     {
-      "userId": 2,
-      "url": "asdfasdf",
-      "title": "asdfasf",
-      "synopsis": "asdfasdf",
-      "timestamp": 1582144987160,
+      "userId": 1,
+      "url": "https://www.pbs.org/newshour/nation/u-s-judge-sides-with-migrants-in-case-against-border-patrol",
+      "title": "U.S. judge sides with migrants in case against Border Patrol",
+      "synopsis": "Conditions at most Border Patrol facilities in Arizona are punitive and unconstitutional, a U.S. judge in Arizona said Wednesday while ruling in favor of migrants who have long-complained about inhumane and unsanitary conditions in holding cells.",
+      "timestamp": 1582211678158,
       "id": 4
+    },
+    {
+      "userId": 2,
+      "url": "https://www.wsoctv.com/news/local/fedex-worker-helping-stranded-driver-falls-75-feet-off-salisbury-bridge-survives/QSTGQ7THGZAEJC3XOAHSN6KEPE/",
+      "title": "'Thank God I’m alive’: FedEx driver survives 75-foot fall from Salisbury bridge",
+      "synopsis": "A FedEx worker who stopped to help a stranded driver fell off the Yadkin River Bridge in Rowan County early Wednesday morning.",
+      "timestamp": 1582211965150,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "url": "https://taskandpurpose.com/syria-weapons-isis-pentagon-inspector-general-report",
+      "title": "The Pentagon lost track of $715 million in weapons and gear funneled to anti-ISIS allies in Syria",
+      "synopsis": "The U.S. government failed to effectively account for nearly $715.8 million in weapons and equipment allocated to Syrian partners as part of the multinational counter-ISIS fight, according to a new report from the Defense Department inspector general.",
+      "timestamp": 1582212056429,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "url": "https://www.cbsnews.com/news/kennedy-catholic-high-school-protests-washington-allegedly-firing-teachers-for-being-gay/",
+      "title": "Catholic school facing protests for allegedly forcing gay teachers out of their jobs",
+      "synopsis": "Students and parents were planning protests after a Catholic school outside of Seattle allegedly forced out two teachers for being gay. Kennedy Catholic High School in Burien, Washington, claims that both English teacher Paul Danforth and soccer coach Michelle Beattie \"voluntarily resigned\" shortly after they got engaged to same-sex partners.",
+      "timestamp": 1582212284004,
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "url": "https://www.cultofmac.com/685669/larry-tesler-the-apple-employee-who-invented-cut-copy-paste-dies-at-74/",
+      "title": "Larry Tesler, the Apple employee who invented cut, copy and paste, dies at 74",
+      "synopsis": "Larry Tesler, a pioneering computer scientist who worked at Apple from 1980 to 1997 and created computerized cut, copy and paste, died Monday at the age of 74.",
+      "timestamp": 1582212426496,
+      "id": 8
+    },
+    {
+      "userId": 4,
+      "url": "https://www.cnn.com/2020/02/19/us/school-bus-driver-casket-55-years-trnd/index.html",
+      "title": "A man who drove a school bus for 55 years will be laid to rest in a school bus casket",
+      "synopsis": "Glen Davis was arguably the best-known driver in all of Grand Meadow, Minnesota.\n\nFor 55 years, residents of his small town of 1,170 trusted him to bus their children to and from school. He was proud to say he'd never once gotten in an accident.",
+      "timestamp": 1582212670234,
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "url": "https://www.abc.net.au/news/2020-02-20/200-vehicles-pile-up-in-whiteout-conditions-in-canada/11986116",
+      "title": "Massive vehicle pileup in Canada involving 200 cars after whiteout conditions on Quebec highway",
+      "synopsis": "Canadian police say whiteout conditions that came about suddenly most likely triggered a massive, deadly pileup involving about 200 vehicles south of Montreal.",
+      "timestamp": 1582212851703,
+      "id": 10
     }
   ],
   "tasks": [
@@ -115,11 +135,32 @@
       "isComplete": false
     },
     {
-      "task": "asdf",
-      "expectedComplete": "",
+      "task": "Clean Bedroom",
+      "expectedComplete": "2020-02-21T12:30",
+      "isComplete": false,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "task": "Take Dogs to Dog Park",
+      "expectedComplete": "2020-02-22T12:00",
+      "isComplete": false,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "task": "Do Laundry",
+      "expectedComplete": "2020-02-21T18:30",
       "isComplete": false,
       "userId": 2,
-      "id": 8
+      "id": 10
+    },
+    {
+      "task": "Do Dishes",
+      "expectedComplete": "2020-02-22T12:00",
+      "isComplete": false,
+      "userId": 2,
+      "id": 11
     }
   ],
   "events": [
@@ -139,59 +180,45 @@
     },
     {
       "userId": 1,
-      "location": "hackery",
-      "name": "merge party",
-      "date": "2020-02-18",
+      "location": "Bridgestone Arena",
+      "name": "Taylor Swift Concert",
+      "date": "2020-02-28",
       "id": 3
     },
     {
       "userId": 1,
-      "location": "j,gchjgf",
-      "name": "kjhgjhg",
-      "date": "2020-02-10",
+      "location": "Grand Ole Opry",
+      "name": "Grand Ole Opry",
+      "date": "2020-02-22",
       "id": 4
     },
     {
-      "userId": 1,
-      "location": "vdfes",
-      "name": "csadfas",
-      "date": "2020-02-04",
+      "userId": 2,
+      "location": "Nissan Stadium",
+      "name": "Nashville SC vs Atlanta United",
+      "date": "2020-02-29",
       "id": 5
     },
     {
-      "userId": 3,
-      "location": "somewhere",
-      "name": "RAGE",
-      "date": "2020-02-18",
+      "userId": 2,
+      "location": "Enterprise Center",
+      "name": "Rage Against The Machine",
+      "date": "2020-05-16",
       "id": 6
     },
     {
-      "userId": 3,
-      "location": "asef",
-      "name": "hello",
-      "date": "2020-02-20",
+      "userId": 4,
+      "location": "Enterprise Center",
+      "name": "Rage Against The Machine",
+      "date": "2020-05-16",
       "id": 7
     },
     {
-      "userId": 3,
-      "location": "asdfadsf",
-      "name": "asdfasdf",
-      "date": "2020-02-03",
-      "id": 8
-    },
-    {
-      "userId": 2,
-      "location": "asdfasdf",
-      "name": "asdfasdf",
-      "date": "2020-02-12",
-      "id": 9
-    },
-    {
       "userId": 4,
-      "location": "asdfasdf",
-      "name": "asdfas",
-      "date": "2020-02-19",
-      "id": 10
+      "location": "BlueBird Cafe",
+      "name": "BlueBirds Cafe Fat Tuesday Celebration",
+      "date": "2020-02-25",
+      "id": 8
     }
   ],
   "messages": [
