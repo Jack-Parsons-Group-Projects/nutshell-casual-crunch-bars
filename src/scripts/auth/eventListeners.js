@@ -29,7 +29,7 @@ const authEvents = {
             articleAPI.getNewsArticles().then(renderNewsArticle);
             eventAPI.getEvents().then(renderEvents);
             tasksAPI.getTasks().then(DOMrender.putTasksOnDom);
-            logInForm.clearLogInForm();
+            logInForm.clearLogInForm(user.userName);
           } else {
             const logInField = document.querySelector("#logInField");
             logInField.innerHTML += `<h3>Login information not found</h3>`;
