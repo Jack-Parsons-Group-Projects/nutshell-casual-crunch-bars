@@ -9,12 +9,13 @@ import renderMessages from "./messages/messagesDom.js"
 import API from "./tasks/dataHandler.js";
 import DOMrender from "./tasks/DOMrender.js";
 import events from "./tasks/eventListeners.js";
-import addDeleteListener from "./messages/eventListeners.js"
+import messEventManager from "./messages/eventListeners.js"
 
 sessionStorage.setItem("userId", 3)
 
 apiActions.getAllMessages().then(renderMessages)
-addDeleteListener()
+messEventManager.addDeleteListener()
+messEventManager.sendMessageListener()
 
 
 

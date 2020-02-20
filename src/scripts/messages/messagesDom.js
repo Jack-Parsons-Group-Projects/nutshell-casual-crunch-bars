@@ -5,9 +5,10 @@ const messagesList = document.querySelector("#messagesList");
 
 const renderMessages = messages => {
     messagesList.innerHTML = ""
+    const activeUser = parseInt(sessionStorage.getItem("userId"))
 
-    const createMessage = messageHTML.createMessages()
-    messagesList.innerHTML += createMessage
+    const messBoardHtml = messageHTML.messBoardHtml()
+    messagesList.innerHTML += messBoardHtml
 
     messages.forEach(message => {
         const oneMessage = messageHTML.messageBody(message)
