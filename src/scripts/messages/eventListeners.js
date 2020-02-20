@@ -45,7 +45,7 @@ const messEventManager = {
     sendMessageListener() {
         document.querySelector("#sendMessage--").addEventListener("click", () => {
             const messField = document.querySelector("#messageTextBox").value
-            const hidden = document.querySelector("#hiddenMessid")
+            const hidden = document.querySelector("#hiddenMessid").value
             const messageUserId = parseInt(sessionStorage.getItem("userId"))
             const messageEntry = {
                 userId: messageUserId,
@@ -54,12 +54,13 @@ const messEventManager = {
             if (hidden !== ""){
                 messageEntry.userId = parseInt(hidden)
                 apiActions.editMessages(messageEntry)
-                .then(()=>{
-                apiActions.getAllMessages()
-                .then(renderMessages)
-                })
+                // .then(()=>{
+                // apiActions.getAllMessages()
+                // .then(renderMessages)
+                // })
             }
-            apiActions.addNewMessage(messageEntry).then(() => {
+            apiActions.addNewMessage(messageEntry)
+            .then(() => {
                 apiActions.getAllMessages()
                     .then(renderMessages)
             })
